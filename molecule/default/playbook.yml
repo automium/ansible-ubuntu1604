@@ -21,6 +21,11 @@
         - bzip2
         - gzip
         - git
+    - name: install json2hcl
+      get_url:
+        url: https://github.com/kvz/json2hcl/releases/download/v0.0.6/json2hcl_v0.0.6_linux_amd64
+        dest: /usr/local/sbin/json2hcl
+        mode: 0555
   roles:
     - role: entercloudsuite.consul
       consul_version: 1.4.3
