@@ -75,6 +75,7 @@
         virtualenv: "{{ script_path }}/venv"
 
 - name: install consul
+  hosts: all
   roles:
     - role: entercloudsuite.consul
       consul_version: 1.4.4
